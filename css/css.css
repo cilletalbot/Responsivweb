@@ -5,12 +5,154 @@
 
 /* Define variables in the :root */
  :root {
-   --contrast: lime;
-   --backgr: #000;
+   --baggrundsfarve: #ccbeac;
+   --tekst: #890000;
  }
 
-/* Use your variables on elements */
- main {
-   color: var(--contrast);
-   background-color: var(--backgr);
- }
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--baggrundsfarve);
+  color: var(--tekst);
+  text-align: center;
+}
+
+
+header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+.menu {
+  position: relative; /* Nødvendig for at placere dropdown relativt */
+}
+
+.menu-btn {
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #870000;
+  margin-right: 100px;
+}
+
+.dropdown-content {
+  display: none; /* Skjuler dropdown som standard */
+  position: absolute;
+  top: 50px; /* Position under knappen */
+  right: 0;
+  background-color: #f0e6dc;
+  border: 2px solid #870000;
+  padding: 10px;
+  width: 180px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-content a {
+  display: block;
+  color: #870000;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #d3bcb0;
+}
+
+.menu:hover .dropdown-content {
+  display: block;
+}
+
+}
+
+
+
+/* Footer styling */
+footer {
+  display: flex;
+  justify-content: space-between; /* Sørg for, at der er jævn afstand mellem sektionerne */
+  align-items: center; /* Centerer elementerne lodret */
+  padding: 20px 60px;
+  background-color: #ccbeac;
+  color: #060606;
+  font-size: 0.9em;
+  border-top: 1px solid #870000; /* Øverste kant til adskillelse */
+}
+
+footer div {
+  flex: 1; /* Hver sektion får lige meget plads */
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 10px; /* Lidt margin på siderne for hver sektion */
+}
+
+/* Special styling for hver sektion */
+.aabeningstider {
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Så overskriften og tiden står under hinanden */
+  gap: 5px; /* Afstand mellem linjerne */
+}
+
+.aabeningstider p {
+  margin: 0; /* Fjerner ekstra margen */
+}
+
+.aabeningstider div {
+  display: flex;
+  justify-content: space-between; /* Fordeler dag og tid til venstre og højre */
+  width: 100px; /* Juster denne værdi for at tilpasse bredden */
+  margin: 0 auto; /* Centerer elementet inden for forældrediv */
+}
+
+.aabeningstider .day {
+  text-align: left;
+  width: 50%; /* Sørger for at dagene står til venstre */
+}
+
+.aabeningstider .time {
+  text-align: right;
+  width: 50%; /* Sørger for at tiderne står til højre */
+}
+/* Nyhedsbrev */
+.nyhedsbrev {
+  text-align: center;
+}
+.nyhedsbrev input[type="email"] {
+  padding: 5px;
+  margin-top: 5px;
+  width: 80%;
+  border: 1px solid #870000;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.nyhedsbrev button {
+  background: none;
+  border: 1px solid #870000;
+  padding: 5px 20px;
+  color: #870000;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nyhedsbrev button:hover {
+  background-color: #870000;
+  color: #fff;
+}
+
+.crossaint.mand {
+  flex: 0 0 80px; /* Giver billedet en fast bredde */
+  text-align: right; /* Justerer billedet til højre */
+}
+/* billede i footer */
+.crossaint.mand img {
+  width: 200px; /* Juster størrelsen af billedet efter behov */
+  height: auto;
+}
