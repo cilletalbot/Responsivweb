@@ -4,155 +4,269 @@
  **/
 
 /* Define variables in the :root */
- :root {
-   --baggrundsfarve: #ccbeac;
-   --tekst: #890000;
- }
-
- body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--baggrundsfarve);
-  color: var(--tekst);
-  text-align: center;
+:root {
+  --baggrundsfarve: #ccbeac;
+  --tekst: #890000;
 }
 
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: var(--baggrundsfarve);
+ color: var(--tekst);
+ text-align: center;
+}
 
+/* Header styling */
 header {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ padding: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
 
 .menu {
-  position: relative; /* Nødvendig for at placere dropdown relativt */
+ position: relative;
 }
 
 .menu-btn {
-  font-size: 50px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #870000;
-  margin-right: 100px;
+ font-size: 50px;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ color: #870000;
+ margin-right: 100px;
 }
 
 .dropdown-content {
-  display: none; /* Skjuler dropdown som standard */
-  position: absolute;
-  top: 50px; /* Position under knappen */
-  right: 0;
-  background-color: #f0e6dc;
-  border: 2px solid #870000;
-  padding: 10px;
-  width: 180px;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+ display: none;
+ position: absolute;
+ top: 50px;
+ right: 0;
+ background-color: var(--baggrundsfarve);
+ border: 2px solid #870000;
+ padding: 10px;
+ width: 180px;
+ box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-content a {
-  display: block;
-  color: #870000;
-  padding: 10px 0;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
+ display: block;
+ color: #870000;
+ padding: 10px 0;
+ font-size: 18px;
+ font-weight: bold;
+ text-decoration: none;
 }
 
 .dropdown-content a:hover {
-  background-color: #d3bcb0;
+ background-color: #d3bcb0;
 }
 
 .menu:hover .dropdown-content {
-  display: block;
+ display: block;
 }
 
+/* Billede slides styling */
+
+/* Generelle stilarter */
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
 }
+
+/* Section-header (tekst før karrusellen) */
+.section-header {
+ margin-bottom: 30px; /* Mellemrum mellem overskrifter og karusellen */
+}
+
+.carousel-container {
+ width: 100%;
+ overflow: hidden;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/* Karrusel */
+.carousel {
+ display: flex;
+ width: max-content;
+ scroll-snap-type: x mandatory;
+ overflow-x: auto;
+ scroll-behavior: smooth;
+}
+
+.carousel-item {
+ flex: 0 0 auto;
+ width: 33.33%; /* Vist 3 billeder ad gangen */
+ padding: 10px; /* Afstand mellem billeder */
+ box-sizing: border-box;
+ scroll-snap-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.carousel-item img {
+ width: 100%;
+ height: auto;
+ border-radius: 10px;
+ 
+
+}
+
+.image-name {
+ width: 80%; /* Juster størrelsen på PNG-billedet */
+ margin-top: 10px; /* Afstand mellem billede og tekst */
+ height: auto;
+}
+
+/* Karrusel kontrol-pilene */
+.carousel-container::before,
+.carousel-container::after {
+ content: '';
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ background-color: rgba(0, 0, 0, 0.5);
+ color: white;
+ padding: 10px;
+ cursor: pointer;
+ border-radius: 50%;
+ font-size: 24px;
+ display: none; /* Pilene er skjult som standard */
+}
+
+.carousel-container::before {
+ left: 10px;
+ content: '←'; /* Venstre pil */
+}
+
+.carousel-container::after {
+ right: 10px;
+ content: '→'; /* Højre pil */
+}
+
+.carousel-container:hover::before,
+.carousel-container:hover::after {
+ display: block; /* Vis pilene, når der hoveres på containeren */
+}
+
+.carousel-container:hover::before {
+ left: 10px;
+}
+
+.carousel-container:hover::after {
+ right: 10px;
+}
+
+/* Pil hover-effekt */
+.carousel-container::before:hover,
+.carousel-container::after:hover {
+ background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.mad-billeder {
+  transition: transform 0.3s ease; /* Glidende overgang */
+}
+
+.mad-billeder:hover {
+  transform: scale(1.05); /* Forstørrer billedet med 5% ved hover */
+}
+
+
 
 
 
 /* Footer styling */
 footer {
-  display: flex;
-  justify-content: space-between; /* Sørg for, at der er jævn afstand mellem sektionerne */
-  align-items: center; /* Centerer elementerne lodret */
-  padding: 20px 60px;
-  background-color: #ccbeac;
-  color: #060606;
-  font-size: 0.9em;
-  border-top: 1px solid #870000; /* Øverste kant til adskillelse */
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 60px;
+ background-color: #ccbeac;
+ color: #060606;
+ font-size: 0.9em;
+ border-top: 1px solid #870000;
 }
 
 footer div {
-  flex: 1; /* Hver sektion får lige meget plads */
-    text-align: center;
-    line-height: 1.6;
-    margin: 0 10px; /* Lidt margin på siderne for hver sektion */
+ flex: 1;
+ text-align: center;
+ line-height: 1.6;
+ margin: 0 10px;
 }
 
-/* Special styling for hver sektion */
 .aabeningstider {
-  text-align: left;
-  display: flex;
-  flex-direction: column; /* Så overskriften og tiden står under hinanden */
-  gap: 5px; /* Afstand mellem linjerne */
+ text-align: left;
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
 }
 
 .aabeningstider p {
-  margin: 0; /* Fjerner ekstra margen */
+ margin: 0;
 }
 
 .aabeningstider div {
-  display: flex;
-  justify-content: space-between; /* Fordeler dag og tid til venstre og højre */
-  width: 100px; /* Juster denne værdi for at tilpasse bredden */
-  margin: 0 auto; /* Centerer elementet inden for forældrediv */
+ display: flex;
+ justify-content: space-between;
+ width: 100px;
+ margin: 0 auto;
 }
 
 .aabeningstider .day {
-  text-align: left;
-  width: 50%; /* Sørger for at dagene står til venstre */
+ text-align: left;
+ width: 50%;
 }
 
 .aabeningstider .time {
-  text-align: right;
-  width: 50%; /* Sørger for at tiderne står til højre */
+ text-align: right;
+ width: 50%;
 }
-/* Nyhedsbrev */
+
 .nyhedsbrev {
-  text-align: center;
+ text-align: center;
 }
+
 .nyhedsbrev input[type="email"] {
-  padding: 5px;
-  margin-top: 5px;
-  width: 80%;
-  border: 1px solid #870000;
-  border-radius: 5px;
-  font-size: 0.9em;
+ padding: 5px;
+ margin-top: 5px;
+ width: 80%;
+ border: 1px solid #870000;
+ border-radius: 5px;
+ font-size: 0.9em;
 }
 
 .nyhedsbrev button {
-  background: none;
-  border: 1px solid #870000;
-  padding: 5px 20px;
-  color: #870000;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+ background: none;
+ border: 1px solid #870000;
+ padding: 5px 20px;
+ color: #870000;
+ cursor: pointer;
+ margin-top: 10px;
+ border-radius: 5px;
+ transition: background-color 0.3s, color 0.3s;
 }
 
 .nyhedsbrev button:hover {
-  background-color: #870000;
-  color: #fff;
+ background-color: #870000;
+ color: #fff;
 }
 
 .crossaint.mand {
-  flex: 0 0 80px; /* Giver billedet en fast bredde */
-  text-align: right; /* Justerer billedet til højre */
+ flex: 0 0 80px;
+ text-align: right;
 }
-/* billede i footer */
+
 .crossaint.mand img {
-  width: 200px; /* Juster størrelsen af billedet efter behov */
-  height: auto;
+ width: 200px;
+ height: auto;
 }
