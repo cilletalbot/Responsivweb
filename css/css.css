@@ -18,6 +18,17 @@ body {
  text-align: center;
 }
 
+
+.h1 {
+  border-bottom: 0.2px solid var(--tekst);
+  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  
+
+}
+
 /* Header styling */
 header {
  padding: 20px;
@@ -26,6 +37,7 @@ header {
  justify-content: space-between;
 }
 
+/*Dropdown Menu knap*/
 .menu {
  position: relative;
 }
@@ -68,9 +80,25 @@ header {
  display: block;
 }
 
+
 /* Billede slides styling */
 
-/* Generelle stilarter */
+
+#galleri {
+  display: flex;
+  width: 100%;
+  border: 1px solid var(--baggrundsfarve);
+  overflow: scroll;
+  gap: 23px;
+}
+
+img  {
+  height: auto;
+  width: 33%;
+  border-radius: 50%;
+  
+}
+
 body {
  font-family: Arial, sans-serif;
  margin: 0;
@@ -172,17 +200,45 @@ body {
 
 
 
-
+/* Ensartet størrelse for madbilleder */
 .mad-billeder {
+  width: 200px; /* Fast bredde */
+  height: 200px; /* Fast højde */
+  object-fit: cover; /* Fylder rammen uden forvrængning */
+  border-radius: 50%; /* Gør billederne runde */
   transition: transform 0.3s ease; /* Glidende overgang */
 }
 
+/* Hover-effekt på mad-billeder */
 .mad-billeder:hover {
-  transform: scale(1.05); /* Forstørrer billedet med 5% ved hover */
+  transform: scale(1.1); /* Forstørrelse ved hover */
+}
+
+.logo-billeder {
+  max-width: 150px;
+  max-height: 150px;
+  width: 50px; /* Juster logoets bredde */
+  height: 50px; /* Juster logoets højde */
+  object-fit: contain; /* Sørger for, at logoet bevarer proportionerne */
+  margin-bottom: 100px; 
+  margin-top: 40px;
+
+
 }
 
 
 
+#galleri
+
+
+/*Gaffel illustration*/
+.gaffel-illustration {
+  margin-right: 200px;
+  margin-top: -350px; /* Flytter billedet op med 20px */
+  padding-right: 1000px;
+  margin-bottom: -250px;
+
+}
 
 
 /* Footer styling */
@@ -269,4 +325,33 @@ footer div {
 .crossaint.mand img {
  width: 200px;
  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+    width: 80%;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; 
+  }
+
+  header img {
+    width: 150px; /* Standard størrelse til større skærme */
+  }
+
+  .menu-btn {
+    font-size: 30px; 
+    margin-right: 0; 
+    padding: 10px; /* Øger padding omkring ikonet for bedre klikområde */
+    align-self: flex-end; /* Sørg for, at det sidder til højre */
+    cursor: pointer; /* Sørger for, at det ser klikbart ud */
+
+  }
+
 }
