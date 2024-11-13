@@ -2,15 +2,13 @@
  * file: css/css.css
  * purpose: styling
  **/
-
 /* Define variables in the :root */
 :root {
   --baggrundsfarve: #ccbeac;
   --tekst: #890000;
 }
-
 body {
- font-family: Arial, sans-serif;
+ font-family: Arial, Helvetica, sans-serif;
  margin: 0;
  padding: 0;
  background-color: var(--baggrundsfarve);
@@ -18,17 +16,15 @@ body {
  text-align: center;
 }
 
-
 .h1 {
   border-bottom: 0.2px solid var(--tekst);
   margin: 20px 0;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
   
-
 }
-
 /* Header styling */
 header {
  padding: 20px;
@@ -37,11 +33,18 @@ header {
  justify-content: space-between;
 }
 
+.banken-logo {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+  height: auto;
+}
 /*Dropdown Menu knap*/
 .menu {
  position: relative;
 }
-
 .menu-btn {
  font-size: 50px;
  background-color: transparent;
@@ -50,7 +53,6 @@ header {
  color: #870000;
  margin-right: 100px;
 }
-
 .dropdown-content {
  display: none;
  position: absolute;
@@ -62,7 +64,6 @@ header {
  width: 180px;
  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
-
 .dropdown-content a {
  display: block;
  color: #870000;
@@ -71,18 +72,14 @@ header {
  font-weight: bold;
  text-decoration: none;
 }
-
 .dropdown-content a:hover {
  background-color: #d3bcb0;
 }
-
 .menu:hover .dropdown-content {
  display: block;
 }
 
-
 /* Billede slides styling */
-
 
 #galleri {
   display: flex;
@@ -91,25 +88,21 @@ header {
   overflow: scroll;
   gap: 23px;
 }
-
 img  {
   height: auto;
   width: 33%;
-  border-radius: 50%;
+  
   
 }
-
 body {
  font-family: Arial, sans-serif;
  margin: 0;
  padding: 0;
 }
-
 /* Section-header (tekst før karrusellen) */
 .section-header {
  margin-bottom: 30px; /* Mellemrum mellem overskrifter og karusellen */
 }
-
 .carousel-container {
  width: 100%;
  overflow: hidden;
@@ -118,7 +111,6 @@ body {
  justify-content: center;
  align-items: center;
 }
-
 /* Karrusel */
 .carousel {
  display: flex;
@@ -127,7 +119,6 @@ body {
  overflow-x: auto;
  scroll-behavior: smooth;
 }
-
 .carousel-item {
  flex: 0 0 auto;
  width: 33.33%; /* Vist 3 billeder ad gangen */
@@ -138,21 +129,17 @@ body {
  flex-direction: column;
  align-items: center;
 }
-
 .carousel-item img {
  width: 100%;
  height: auto;
  border-radius: 10px;
  
-
 }
-
 .image-name {
  width: 80%; /* Juster størrelsen på PNG-billedet */
  margin-top: 10px; /* Afstand mellem billede og tekst */
  height: auto;
 }
-
 /* Karrusel kontrol-pilene */
 .carousel-container::before,
 .carousel-container::after {
@@ -168,36 +155,29 @@ body {
  font-size: 24px;
  display: none; /* Pilene er skjult som standard */
 }
-
 .carousel-container::before {
  left: 10px;
  content: '←'; /* Venstre pil */
 }
-
 .carousel-container::after {
  right: 10px;
  content: '→'; /* Højre pil */
 }
-
 .carousel-container:hover::before,
 .carousel-container:hover::after {
  display: block; /* Vis pilene, når der hoveres på containeren */
 }
-
 .carousel-container:hover::before {
  left: 10px;
 }
-
 .carousel-container:hover::after {
  right: 10px;
 }
-
 /* Pil hover-effekt */
 .carousel-container::before:hover,
 .carousel-container::after:hover {
  background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 
 /* Ensartet størrelse for madbilleder */
@@ -208,12 +188,10 @@ body {
   border-radius: 50%; /* Gør billederne runde */
   transition: transform 0.3s ease; /* Glidende overgang */
 }
-
 /* Hover-effekt på mad-billeder */
 .mad-billeder:hover {
   transform: scale(1.1); /* Forstørrelse ved hover */
 }
-
 .logo-billeder {
   max-width: 150px;
   max-height: 150px;
@@ -223,13 +201,10 @@ body {
   margin-bottom: 100px; 
   margin-top: 40px;
 
-
 }
 
 
-
 #galleri
-
 
 /*Gaffel illustration*/
 .gaffel-illustration {
@@ -237,8 +212,10 @@ body {
   margin-top: -350px; /* Flytter billedet op med 20px */
   padding-right: 1000px;
   margin-bottom: -250px;
-
+  width: 100px;
+  height: auto;
 }
+
 
 
 /* Footer styling */
@@ -252,46 +229,38 @@ footer {
  font-size: 0.9em;
  border-top: 1px solid #870000;
 }
-
 footer div {
  flex: 1;
  text-align: center;
  line-height: 1.6;
  margin: 0 10px;
 }
-
 .aabeningstider {
  text-align: left;
  display: flex;
  flex-direction: column;
  gap: 5px;
 }
-
 .aabeningstider p {
  margin: 0;
 }
-
 .aabeningstider div {
  display: flex;
  justify-content: space-between;
  width: 100px;
  margin: 0 auto;
 }
-
 .aabeningstider .day {
  text-align: left;
  width: 50%;
 }
-
 .aabeningstider .time {
  text-align: right;
  width: 50%;
 }
-
 .nyhedsbrev {
  text-align: center;
 }
-
 .nyhedsbrev input[type="email"] {
  padding: 5px;
  margin-top: 5px;
@@ -300,7 +269,6 @@ footer div {
  border-radius: 5px;
  font-size: 0.9em;
 }
-
 .nyhedsbrev button {
  background: none;
  border: 1px solid #870000;
@@ -311,47 +279,114 @@ footer div {
  border-radius: 5px;
  transition: background-color 0.3s, color 0.3s;
 }
-
 .nyhedsbrev button:hover {
  background-color: #870000;
  color: #fff;
 }
-
 .crossaint.mand {
  flex: 0 0 80px;
  text-align: right;
 }
-
 .crossaint.mand img {
  width: 200px;
  height: auto;
 }
 
+/* Responsiv Mobil*/
 
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5em;
     width: 80%;
+    margin-left: 45px; /* Flyt h1 20px til højre */
   }
-
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px; 
+    flex-direction: column;
   }
-
   header img {
     width: 150px; /* Standard størrelse til større skærme */
+    margin-right: 250px;
   }
-
+  
+  .banken-logo {
+    width: 110px; /* Mindre logo */
+  
+    
+  }
   .menu-btn {
+    font-size: 24px;
     font-size: 30px; 
     margin-right: 0; 
     padding: 10px; /* Øger padding omkring ikonet for bedre klikområde */
     align-self: flex-end; /* Sørg for, at det sidder til højre */
     cursor: pointer; /* Sørger for, at det ser klikbart ud */
+    margin-left: 250px;
+    margin-top: -200px; /* Flyt menu-knappen op med 10px */
+    margin-bottom: 50px;
+    
+
 
   }
+  .carousel-item {
+    width: 50%; /* Et billede ad gangen */
+  }
+  .dropdown-content {
+    width: 150px; /* Reducer dropdown-menuens bredde */
+  }
+  .mad-billeder {
+    width: 150px;
+    height: 150px;
+  }
 
+
+  footer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  footer div {
+    margin: 10px 0;
+  }
+
+  .aabeningstider {
+    text-align: center;
+    line-height: 1.8; /* Øger linjeafstanden for mere luft mellem linjerne */
+    margin: 20px 0; /* Giver luft over og under hele sektionen */
+    font-size: 18px;
+  }
+  
+  .aabeningstider h3 {
+    margin-top: 20px; /* Ekstra afstand over hver overskrift, hvis du har brug for det */
+  }
+  
+  .aabeningstider p {
+    margin: 10px 0; /* Ekstra afstand over og under hver linje i åbningstiderne */
+  }
+
+  .nyhedsbrev, .lokation {
+    margin-top: 30px; /* Giver ekstra luft mellem åbningstider og nyhedsbrevsektionen og mellem nyhedsbrev og location */
+    font-size: 18px;
+  }
+
+  .nyhedsbrev input[type="email"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .nyhedsbrev p {
+    font-size: 1.5em;
+  }
+  .nyhedsbrev button {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  .crossaint.mand img {
+    width: 150px;
+  }
 }
